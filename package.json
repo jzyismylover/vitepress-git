@@ -1,0 +1,16 @@
+{
+  "name": "vitepress-study",
+  "version": "1.0.0",
+  "description": "vitepress 初始构建",
+  "main": "index.js",
+  "author": "jzyismylover",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "^0.20.0"
+  }
+}

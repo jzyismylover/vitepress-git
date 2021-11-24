@@ -69,6 +69,11 @@ git branch -a  // 查看所有分支（包括本地和远程）
 ```
 
 ### switch
+- 切换分支
+```js
+git switch [option]
+git switch branch // 创建一个名为branch的分支
+```
 
 
 ### checkout

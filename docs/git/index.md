@@ -53,7 +53,7 @@ git init
 ```
 
 ### clone
-- 从远程服务器克隆项目到本地仓库
+- 从远程仓库克隆项目到本地仓库
 ```js
 git clone [url] 
 //整体的步骤是 git init初始化本地仓库，然后拉取远程的内容到本地
@@ -61,42 +61,94 @@ git clone [url]
 
 ### branch
 - 查看本地、远程分支
+- 分支的概念：分支其实就像概念上的理解一样，是代码仓库的分支，每个分支都保存着各自的内容，切换分支意味为切换工作模块。
 ```js
 git branch [option]
 git branch  // 查看本地分支
 git branch -r  // 查看远程分支
 git branch -a  // 查看所有分支（包括本地和远程）
+git branch -m dev dev2 // 将dev分支更名为dev2
+git branch --set-upstream-to=origin/remote_branch local_branch // 本地 local_branch分支关联远程 remote_branch分支
 ```
 
 ### switch
-- 切换分支
+- 切换或创建分支
 ```js
 git switch [option]
-git switch branch // 创建一个名为branch的分支
+git switch branch // 切换到名为branch的分支
+git switch -c branch // 创建一个名为 branch的分支并切换到该分支
+```
+
+### checkout
+- 切换或创建分支
+```js
+git checkout [option]
+git checkout branch // 切换到名为branch的分支
+git checkout -b branch // 创建名为 branch的分支并切换到该分支
+```
+
+### add
+- 将本地修改的内容提交到暂存区
+```js
+git add . // 提交当前所有修改的内容
+git add filename // 提交文件名为filename修改的内容
 ```
 
 
-### checkout
-
-
-### add
-
-
 ### commit
+- 将暂存区中的文件列表包含的文件提交到本地仓库
+```js
+git commit -m "xxxx" //xxxx为本次提交的评论信息
+```
+**提交信息遵循的原则**
+- feat: 添加新功能
+- fix: 修复问题
+- refactor: 代码重构
+- docs: 文档修改
+- style: 代码格式修改
+- test: 测试用例修改
+- chore: 其他修改(构建流程、依赖管理)
 
 
 
+### push
+- 将本地仓库的内容上传到远程仓库
+```js
+git push [option]
+git push -u origin local_branch:remote_branch //强制推送到远程名为 remote_branch的分支(不推荐使用)
+git push origin local_branch:remote_branch //(推荐使用)
+```
 
 ### fetch
 - 首先先理解清楚 fetch 命令的使用场景和使用背景
 - 从一个或多个其他存储库中获取分支和/或标签(统称为“引用”)以及完成其历史所必需的对象。 远程跟踪分支已更新(Git术语叫做commit)，需要将这些更新取回本地，这时就要用到`fetch`
-<br>
+
+```js
+git fetch [option]
+git fetch origin remote_branch:local_branch // 从远程的origin仓库的 remote_branch 分支下载代码到本地并新建一个local_branch分支
+```
 
 ### merge
-
+- 合并分支
+- 代码冲突：代码冲突的意思是当前工作树的内容与将要合并的内容存在不一致的地方
+```js
+git merge dev //将dev分支的内容合并到当前分支
+// 注意：可能存在代码冲突的问题(通常人为选择)
+```
 
 
 ### pull
+- 拉取远程仓库的内容到本地
+```js
+git pull [option]
+git pull origin remote_branch:local_branch // 将远程分支remote_branch的内容拉取到 local_branch
+// 注意：可能存在代码冲突的问题(通常人为选择)
+
+git pull --allow-unrelated-histories remote_branch:local_branch
+// 当我们在两个不同平台上的项目分别切换提交的时候会出现这个问题
+// 这个是比较常用的解决方法
+```
+
 
 ### stash
 - stash常用于暂时缓存当前分支修改的内容，然后再切换到别的分支去修改紧急的 bug
@@ -110,3 +162,10 @@ git stash pop // 将堆栈当中的最后一项恢复出来并删除
 git stash apply stash@{n} // 将堆栈的第 n 项恢复出来
 git stash drop stash@{n} // 删除第 n 个堆栈的信息
 ```
+
+### git 常用命令速查表
+![avatar](https://static.vue-js.com/0a10f3c0-f7b0-11eb-991d-334fd31f0201.png)
+
+
+### git 出错问题解决方案
+1. https://www.cnblogs.com/fairylyl/p/15059437.html

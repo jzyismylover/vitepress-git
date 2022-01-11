@@ -1,4 +1,4 @@
-## vitepress 初始化配置
+# vitepress 初始化配置
 
 - 步骤 1: 创建并进入一个目录
 ```javascript
@@ -35,4 +35,4 @@ $ yarn docs:dev
 ```
 
 
-## 静态资源处理
+# 静态资源处理

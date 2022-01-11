@@ -12,7 +12,8 @@ module.exports = {
     sidebar: [
       { text: '初始配置', link: '/guide/' },
       { text: '版本控制', link: '/git/' },
-      { text: '学习问题', link: '/study/' }
+      { text: '学习问题', link: '/study/' },
+      { text: 'node环境配置', link: '/node/'}
     ],
   },
   // 重载 markdown-it 的配置

@@ -2,8 +2,7 @@
 home: true
 heroImage: /xxn.png
 heroAlt: Logo image
-heroText: 学习资料整理
-actionText: Get Started
+actionText: 快速开始
 actionLink: /guide/
 features:
   - title: Simplicity First

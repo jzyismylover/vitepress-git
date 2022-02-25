@@ -43,6 +43,10 @@ function createNav() {
     {
       text: '学习问题',
       link: '/guide/question'
+    },
+    {
+      text: '学校课程',
+      link: '/school/'
     }
   ]
 }

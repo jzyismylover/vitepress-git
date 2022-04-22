@@ -37,12 +37,16 @@ function createNav() {
         {
           text: 'typescript',
           link: '/guide/typescript'
+        },
+        {
+          text: '算法刷题',
+          link: '/guide/suanfa'
         }
       ]
     },
     {
       text: '学习问题',
-      link: '/guide/question'
+      link: '/learning/question'
     },
     {
       text: '学校课程',
@@ -56,10 +60,10 @@ function createSidebar() {
   return {
     '/guide/': [
       {
-        text: '学习资料',
+        text: 'Learning',
         children: [
           {
-            text: 'vitepress 搭建流程',
+            text: 'vitepress',
             link: '/guide/'
           },
           {
@@ -67,7 +71,7 @@ function createSidebar() {
             link: '/guide/git'
           },
           {
-            text: 'node环境配置',
+            text: 'node',
             link: '/guide/node'
           },
           {
@@ -77,13 +81,18 @@ function createSidebar() {
           {
             text: '项目实训',
             link: '/guide/project'
+          },
+          {
+            text: '算法刷题',
+            link: '/guide/suanfa'
           }
         ]
       }
     ],
-    '/guide/question': [
+    '/learning/': [
       {
-        text: '学习问题'
+        text: '基础问题',
+        link: '/learning/question'
       }
     ]
   }

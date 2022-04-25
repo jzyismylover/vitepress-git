@@ -41,6 +41,10 @@ function createNav() {
         {
           text: '算法刷题',
           link: '/guide/suanfa'
+        },
+        {
+          text: '宝藏网站',
+          link: '/guide/good-website'
         }
       ]
     },
@@ -85,6 +89,10 @@ function createSidebar() {
           {
             text: '算法刷题',
             link: '/guide/suanfa'
+          },
+          {
+            text: '宝藏网站',
+            link: '/guide/good-website'
           }
         ]
       }

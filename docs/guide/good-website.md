@@ -2,7 +2,7 @@
 
 [在线网址](https://learngitbranching.js.org/)
 
-![image-20220425221528867](../git-websit.png)
+![avatar](/git-websit.png)  
 
 
 
